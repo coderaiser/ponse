@@ -16,7 +16,6 @@
     "parse"
   ],
   "dependencies": {
-    "mime": "~1.2.11",
     "pipe-io": "~0.9.3",
     "util-io": "~1.2.3"
   },
