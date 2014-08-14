@@ -1,0 +1,25 @@
+{
+  "name": "ponse",
+  "version": "1.0.0",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
+  "description": "Module for work with requests and responses",
+  "homepage": "http://github.com/coderaiser/ponse",
+  "main": "lib/ponse.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/ponse.git"
+  },
+  "keywords": [
+    "request",
+    "response",
+    "send",
+    "parse"
+  ],
+  "dependencies": {
+    "mime": "~1.2.11",
+    "pipe-io": "~0.9.3",
+    "util-io": "~1.2.3"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
