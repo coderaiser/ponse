@@ -18,6 +18,11 @@ Module for work with requests and responses
 **getQuery(request)** - get query
 - http request
 
+**static(directory, options) - serve static content
+- directory path
+- options: 
+    - cache
+
 ## License
 
 MIT
