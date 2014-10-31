@@ -19,7 +19,7 @@
     "ponse": "bin/ponse.js"
   },
   "dependencies": {
-    "pipe-io": "~0.9.3",
+    "pipe-io": "~1.0.0",
     "util-io": "~1.4.0"
   },
   "devDependencies": {},
