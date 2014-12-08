@@ -1,3 +1,9 @@
+2014.12.08, v1.3.0
+
+feature:
+- (ponse) send: rm notLog
+
+
 2014.11.18, v1.2.8
 
 fix:
