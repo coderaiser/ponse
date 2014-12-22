@@ -19,9 +19,12 @@
     "ponse": "bin/ponse.js"
   },
   "dependencies": {
+    "checkup": "~1.0.2",
     "debug": "~2.1.0",
+    "execon": "~1.0.1",
+    "extend": "~2.0.0",
     "files-io": "~1.2.0",
-    "util-io": "~1.6.0"
+    "itype": "~1.0.1"
   },
   "devDependencies": {},
   "license": "MIT"
