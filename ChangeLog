@@ -1,3 +1,9 @@
+2014.12.22, v1.3.1
+
+feature:
+- (package) rm util-io; add execon, checkup, extend, itype
+
+
 2014.12.08, v1.3.0
 
 feature:
