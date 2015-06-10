@@ -1,3 +1,9 @@
+2015.06.10, v1.4.0
+
+feature:
+- (ponse) send, sendFile, setHeader: add mime
+
+
 2015.06.03, v1.3.6
 
 feature:
