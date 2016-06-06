@@ -41,6 +41,7 @@
     ".dvi": "application/x-dvi",
     ".ear": "application/java-archive",
     ".eml": "message/rfc822",
+    ".eot": "application/vnd.ms-fontobject",
     ".eps": "application/postscript",
     ".exe": "application/x-msdownload",
     ".f": "text/x-fortran",
@@ -167,3 +168,4 @@
     ".yml": "text/yaml",
     ".zip": "application/zip"
 }
+
