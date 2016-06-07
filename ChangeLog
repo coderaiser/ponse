@@ -1,3 +1,9 @@
+2016.06.07, v1.4.2
+
+fix:
+- (ext) proper mime type for eot
+
+
 2015.06.10, v1.4.1
 
 feature:
