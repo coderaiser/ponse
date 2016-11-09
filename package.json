@@ -19,7 +19,7 @@
     "ponse": "bin/ponse.js"
   },
   "dependencies": {
-    "debug": "~2.2.0",
+    "debug": "^2.3.0",
     "execon": "~1.2.0",
     "extendy": "~1.0.0",
     "files-io": "~1.2.0",
