@@ -1,3 +1,12 @@
+2016.11.25, v1.4.4
+
+fix:
+- (ponse) sendFile: mtime -> mtime.toUTCString
+
+feature:
+- (package) ~ -> ^
+
+
 2016.11.09, v1.4.3
 
 feature:
