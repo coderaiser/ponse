@@ -20,10 +20,10 @@
   },
   "dependencies": {
     "debug": "^2.3.0",
-    "execon": "~1.2.0",
-    "extendy": "~1.0.0",
-    "files-io": "~1.2.0",
-    "itype": "~1.0.1"
+    "execon": "^1.2.0",
+    "extendy": "^1.0.0",
+    "files-io": "^1.2.0",
+    "itype": "^1.0.1"
   },
   "devDependencies": {},
   "license": "MIT"
