@@ -26,5 +26,8 @@
     "itype": "^2.0.0"
   },
   "devDependencies": {},
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  }
 }
