@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git://github.com/coderaiser/ponse.git"
   },
+  "scripts": {
+    "lint": "eslint lib"
+  },
   "keywords": [
     "request",
     "response",
@@ -25,7 +28,10 @@
     "files-io": "^2.0.0",
     "itype": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-node": "^6.0.1"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=4.0.0"
