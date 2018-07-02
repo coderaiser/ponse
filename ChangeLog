@@ -1,3 +1,11 @@
+2018.07.02, v2.0.1
+
+feature:
+- (package) eslint v5.0.1
+- (ponse) simplify path to ext.json
+- (package) lint
+
+
 2018.05.02, v2.0.0
 
 feature:
