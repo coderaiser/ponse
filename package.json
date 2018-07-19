@@ -10,7 +10,9 @@
     "url": "git://github.com/coderaiser/ponse.git"
   },
   "scripts": {
-    "lint": "eslint lib"
+    "lint:lib": "eslint lib",
+    "lint:bin": "eslint --rule 'no-console:0' bin",
+    "lint": "redrun lint:*"
   },
   "keywords": [
     "request",
@@ -30,7 +32,8 @@
   },
   "devDependencies": {
     "eslint": "^5.1.0",
-    "eslint-plugin-node": "^7.0.1"
+    "eslint-plugin-node": "^7.0.1",
+    "redrun": "^6.0.6"
   },
   "license": "MIT",
   "engines": {
