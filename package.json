@@ -12,7 +12,14 @@
   "scripts": {
     "lint:lib": "eslint lib",
     "lint:bin": "eslint --rule 'no-console:0' bin",
-    "lint": "redrun lint:*"
+    "lint:test": "eslint -c .eslintrc.test test  --no-eslintrc",
+    "lint": "redrun lint:*",
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc npm test",
+    "test": "tape test/*.js",
+    "watch:coverage": "npm run watcher -- npm run coverage",
+    "watch:test": "npm run watcher -- npm test",
+    "watcher": "nodemon -w test -w lib --exec"
   },
   "keywords": [
     "request",
@@ -31,9 +38,16 @@
     "itype": "^2.0.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
+    "es6-promisify": "^6.0.0",
     "eslint": "^5.1.0",
     "eslint-plugin-node": "^7.0.1",
-    "redrun": "^6.0.6"
+    "got": "^8.3.2",
+    "nodemon": "^1.18.3",
+    "nyc": "^12.0.2",
+    "redrun": "^6.0.6",
+    "tape": "^4.9.1",
+    "try-to-catch": "^1.0.2"
   },
   "license": "MIT",
   "engines": {
