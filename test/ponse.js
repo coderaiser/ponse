@@ -18,3 +18,9 @@ test('ponse: path traversal: message', async (t) => {
     t.end();
 });
 
+test('ponse: path traversal: status: ok', async (t) => {
+    const {statusCode} = await get('ponse.js', __dirname);
+    
+    t.equal(statusCode, 200, 'should equal');
+    t.end();
+});
