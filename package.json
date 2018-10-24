@@ -31,7 +31,7 @@
     "ponse": "bin/ponse.js"
   },
   "dependencies": {
-    "debug": "^3.0.0",
+    "debug": "^4.1.0",
     "execon": "^1.2.0",
     "extendy": "^1.0.0",
     "files-io": "^3.0.0",
