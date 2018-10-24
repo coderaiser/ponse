@@ -3,7 +3,7 @@
 const http = require('http');
 
 const got = require('got');
-const {promisify} = require('es6-promisify');
+const {promisify} = require('util');
 const ponse = require('..');
 
 const getURL = (path, port) => `http://127.0.0.1:${port}/${path}`;

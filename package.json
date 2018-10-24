@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
-    "es6-promisify": "^6.0.0",
     "eslint": "^5.1.0",
     "eslint-plugin-node": "^7.0.1",
     "got": "^9.2.2",

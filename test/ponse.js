@@ -12,7 +12,7 @@ test('ponse: path traversal: statusCode', async (t) => {
 
 test('ponse: path traversal: message', async (t) => {
     const {body} = await get('../../../../../../etc/passwd', __dirname);
-    const expect = 'Path /etc/passwd beyond root /home/coderaiser/ponse/test!';
+    const expect = `Path /etc/passwd beyond root ${__dirname}!`;
     
     t.equal(body, expect, 'should equal');
     t.end();
