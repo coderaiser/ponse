@@ -12,7 +12,7 @@ Module for work with requests and responses
 **isGZIP(request)** check is gzip supported
 - http request
     
-**getPathName(request)** - get pathname
+**getPathName(request || string)** - get pathname
 - http request
 
 **getQuery(request)** - get query

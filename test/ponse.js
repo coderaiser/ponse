@@ -2,6 +2,9 @@
 
 const test = require('tape');
 const {get} = require('./connect');
+const {
+    getPathName,
+} = require('..');
 
 test('ponse: path traversal: statusCode', async (t) => {
     const {statusCode} = await get('../../../../../../etc/passwd', __dirname);
@@ -29,6 +32,24 @@ test('ponse: path traversal: status: ok', async (t) => {
     const {statusCode} = await get('ponse.js', `${__dirname}/../lib`);
     
     t.equal(statusCode, 200, 'should equal');
+    t.end();
+});
+
+test('ponse: getPathName: res', (t) => {
+    const url = '/hello?world=1'
+    const name = getPathName({
+        url,
+    });
+    
+    t.equal(name, '/hello', 'should equal');
+    t.end();
+});
+
+test('ponse: getPathName: string', (t) => {
+    const url = '/hello?world=1';
+    const name = getPathName(url);
+    
+    t.equal(name, '/hello', 'should equal');
     t.end();
 });
 
