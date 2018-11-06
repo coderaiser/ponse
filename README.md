@@ -15,7 +15,7 @@ Module for work with requests and responses
 **getPathName(request || string)** - get pathname
 - http request
 
-**getQuery(request)** - get query
+**getQuery(request || string)** - get query
 - http request
 
 **static(directory, options)** - serve static content

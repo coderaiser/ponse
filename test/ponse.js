@@ -4,6 +4,7 @@ const test = require('tape');
 const {get} = require('./connect');
 const {
     getPathName,
+    getQuery,
 } = require('..');
 
 test('ponse: path traversal: statusCode', async (t) => {
@@ -50,6 +51,25 @@ test('ponse: getPathName: string', (t) => {
     const name = getPathName(url);
     
     t.equal(name, '/hello', 'should equal');
+    t.end();
+});
+
+test('ponse: getQuery', (t) => {
+    const req = {
+        url: 'hi?world',
+    };
+    
+    const query = getQuery(req);
+    
+    t.equal(query, 'world', 'should equal');
+    t.end();
+});
+
+test('ponse: getQuery: string', (t) => {
+    const url = 'hi?world';
+    const query = getQuery(url);
+    
+    t.equal(query, 'world', 'should equal');
     t.end();
 });
 
