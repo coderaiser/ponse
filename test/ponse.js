@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const {get} = require('./connect');
 const {
     getPathName,
@@ -37,7 +37,7 @@ test('ponse: path traversal: status: ok', async (t) => {
 });
 
 test('ponse: getPathName: res', (t) => {
-    const url = '/hello?world=1'
+    const url = '/hello?world=1';
     const name = getPathName({
         url,
     });

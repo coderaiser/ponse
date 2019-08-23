@@ -29,7 +29,7 @@ module.exports.get = async (path, root) => {
     const url = getURL(path, port);
     
     const res = await got(url, {
-        throwHttpErrors: false
+        throwHttpErrors: false,
     });
     
     done();
