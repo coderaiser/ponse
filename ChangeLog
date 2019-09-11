@@ -1,3 +1,10 @@
+2019.09.11, v3.4.1
+
+feature:
+- (ponse) rm legacy
+- (ponse) download: Content-Type: application/octet-stream -> Content-Disposition: attachment
+
+
 2019.08.23, v3.4.0
 
 feature:
