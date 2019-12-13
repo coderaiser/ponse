@@ -40,7 +40,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-putout": "^2.0.0",
     "got": "^9.2.2",
-    "madrun": "^2.5.0",
+    "madrun": "^5.0.1",
     "nodemon": "^1.18.3",
     "nyc": "^14.1.1",
     "putout": "^5.8.0",
