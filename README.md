@@ -23,6 +23,11 @@ Module for work with requests and responses
 - options: 
     - cache
 
+**static(options)** - serve static content
+- options:
+    - cache
+    - root
+
 ## License
 
 MIT

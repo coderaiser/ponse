@@ -1,21 +1,33 @@
 'use strict';
 
 const test = require('supertape');
-const {get} = require('./connect');
+
+const ponse = require('..');
+
 const {
     getPathName,
     getQuery,
-} = require('..');
+} = ponse;
 
-test('ponse: path traversal: statusCode', async (t) => {
-    const {statusCode} = await get('../../../../../../etc/passwd', __dirname);
+const {request} = require('serve-once')(ponse.static);
+
+test('ponse: path traversal: status', async (t) => {
+    const {status} = await request.get('/../../../../../../etc/passwd', {
+        options: {
+            root: __dirname,
+        },
+    });
     
-    t.equal(statusCode, 404, 'should equal');
+    t.equal(status, 404, 'should equal');
     t.end();
 });
 
 test('ponse: path traversal: message', async (t) => {
-    const {body} = await get('../../../../../../etc/passwd', __dirname);
+    const {body} = await request.get('/../../../../../../etc/passwd', {
+        options: {
+            root: __dirname,
+        },
+    });
     const expect = `Path /etc/passwd beyond root ${__dirname}!`;
     
     t.equal(body, expect, 'should equal');
@@ -23,16 +35,24 @@ test('ponse: path traversal: message', async (t) => {
 });
 
 test('ponse: path traversal: status: ok', async (t) => {
-    const {statusCode} = await get('ponse.js', __dirname);
+    const {status} = await request.get('/ponse.js', {
+        options: {
+            root: __dirname,
+        },
+    });
     
-    t.equal(statusCode, 200, 'should equal');
+    t.equal(status, 200, 'should equal');
     t.end();
 });
 
 test('ponse: path traversal: status: ok', async (t) => {
-    const {statusCode} = await get('ponse.js', `${__dirname}/../lib`);
+    const {status} = await request.get('/ponse.js', {
+        options: {
+            root: `${__dirname}/../lib`,
+        },
+    });
     
-    t.equal(statusCode, 200, 'should equal');
+    t.equal(status, 200, 'should equal');
     t.end();
 });
 
