@@ -32,7 +32,7 @@
     "debug": "^4.1.0",
     "execon": "^1.2.0",
     "files-io": "^3.0.0",
-    "itype": "^2.0.0"
+    "itype": "^3.0.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
