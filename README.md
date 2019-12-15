@@ -18,11 +18,6 @@ Module for work with requests and responses
 **getQuery(request || string)** - get query
 - http request
 
-**static(directory, options)** - serve static content
-- directory path
-- options: 
-    - cache
-
 **static(options)** - serve static content
 - options:
     - cache
