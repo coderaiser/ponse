@@ -1,3 +1,9 @@
+2019.12.15, v4.0.0
+
+feature:
+- (ponse) drop support of directory as first argument in static
+
+
 2019.12.13, v3.5.1
 
 fix:
