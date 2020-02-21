@@ -32,7 +32,8 @@
     "debug": "^4.1.0",
     "execon": "^1.2.0",
     "files-io": "^3.0.0",
-    "itype": "^3.0.1"
+    "itype": "^3.0.1",
+    "try-to-catch": "^2.0.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
@@ -48,7 +49,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=8.3.0"
+    "node": ">=10"
   },
   "publishConfig": {
     "access": "public"
