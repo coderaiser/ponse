@@ -23,6 +23,8 @@ Module for work with requests and responses
     - cache
     - root
 
+**send(data, params)** - send data
+
 ## License
 
 MIT

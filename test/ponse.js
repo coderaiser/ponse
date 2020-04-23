@@ -1,12 +1,14 @@
 'use strict';
 
 const test = require('supertape');
+const stub = require('@cloudcmd/stub');
 
 const ponse = require('..');
 
 const {
     getPathName,
     getQuery,
+    send,
 } = ponse;
 
 const {request} = require('serve-once')(ponse.static);
@@ -90,6 +92,23 @@ test('ponse: getQuery: string', (t) => {
     const query = getQuery(url);
     
     t.equal(query, 'world', 'should equal');
+    t.end();
+});
+
+test('ponse: send', (t) => {
+    const request = {};
+    const response = {
+        writableFinished: true,
+        end: stub(),
+        setHeader: stub(),
+    };
+    
+    ponse.send('hello', {
+        response,
+        request,
+    });
+    
+    t.notOk(response.end.called, 'should not call response.end');
     t.end();
 });
 
