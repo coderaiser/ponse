@@ -4,10 +4,18 @@
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Module for work with requests and responses",
   "homepage": "http://github.com/coderaiser/ponse",
-  "main": "lib/ponse.js",
+  "type": "commonjs",
+  "main": "./lib/ponse.js",
+  "exports": "./lib/ponse.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/coderaiser/ponse.git"
+  },
+  "nyc": {
+    "exclude": [
+      ".madrun.js",
+      "test"
+    ]
   },
   "scripts": {
     "lint": "madrun lint",
@@ -30,7 +38,6 @@
   },
   "dependencies": {
     "debug": "^4.1.0",
-    "execon": "^1.2.0",
     "files-io": "^3.0.0",
     "itype": "^3.0.1",
     "try-to-catch": "^3.0.0"
