@@ -103,7 +103,7 @@ test('ponse: send', (t) => {
         setHeader: stub(),
     };
     
-    ponse.send('hello', {
+    send('hello', {
         response,
         request,
     });
