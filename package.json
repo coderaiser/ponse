@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "debug": "^4.1.0",
+    "file-type": "^14.2.0",
     "files-io": "^3.0.0",
     "itype": "^3.0.1",
     "try-to-catch": "^3.0.0"

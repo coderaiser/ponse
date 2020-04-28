@@ -13,6 +13,8 @@ const {
 
 const {request} = require('serve-once')(ponse.static);
 
+const {keys} = Object;
+
 test('ponse: path traversal: status', async (t) => {
     const {status} = await request.get('/../../../../../../etc/passwd', {
         options: {
@@ -112,3 +114,27 @@ test('ponse: send', (t) => {
     t.end();
 });
 
+test('ponse: get: content-type', async (t) => {
+    const filesToMimes = {
+        '320px-Floppy_disk_2009_G1' : 'image/jpeg',
+        '320px-Floppy_disk_2009_G1.jpg' : 'image/jpeg',
+        '294px-Railroad1860.png' : 'image/png',
+        '294px-Railroad1860' : 'image/png',
+        'hello.txt' : 'text/plain; charset=UTF-8',
+    };
+    
+    for (const file of keys(filesToMimes)) {
+        const {headers} = await request.get('/' + file, {
+            options: {
+                root: __dirname + '/../test/fixtures/mimetype/',
+            },
+        });
+        
+        const reportedMime = headers.get('content-type');
+        const expect = filesToMimes[file];
+        
+        t.equal(reportedMime, expect, 'should equal');
+    }
+    
+    t.end();
+});
