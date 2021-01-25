@@ -1,3 +1,21 @@
+2021.01.25, v6.0.0
+
+fix:
+- Initial commit.
+- Initial commit.
+
+feature:
+- (package) @cloudcmd/stub v3.3.0
+- (package) file-type v16.2.0
+- (ponse) drop support of node < 14
+- (package) madrun v8.6.2
+- (package) putout v13.9.1
+- (package) eslint-plugin-putout v6.13.1
+- (package) eslint v7.18.0
+- (package) files-io v4.0.0
+- (package) supertape v4.8.1
+
+
 2020.04.23, v5.1.1
 
 fix:
