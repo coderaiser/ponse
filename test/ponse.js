@@ -114,26 +114,26 @@ test('ponse: send', (t) => {
 
 test('ponse: get: content-type', async (t) => {
     const filesToMimes = {
-        "320px-Floppy_disk_2009_G1" : "image/jpeg",
-        "320px-Floppy_disk_2009_G1.jpg" : "image/jpeg",
-        "294px-Railroad1860.png" : "image/png",
-        "294px-Railroad1860" : "image/png",
-        "hello.txt" : "text/plain; charset=UTF-8",
-    }
-
-    var file;
+        '320px-Floppy_disk_2009_G1': 'image/jpeg',
+        '320px-Floppy_disk_2009_G1.jpg': 'image/jpeg',
+        '294px-Railroad1860.png': 'image/png',
+        '294px-Railroad1860': 'image/png',
+        'hello.txt': 'text/plain; charset=UTF-8',
+    };
+    
+    let file;
     for (file in filesToMimes) {
         const {headers} = await request.get('/' + file, {
             options: {
                 root: __dirname + '/../test/fixtures/mimetype/',
             },
         });
-
+        
         const reportedMime = headers.get('content-type');
-        const expect = filesToMimes[file]
-
-        t.equal(reportedMime, expect, 'should equal')
+        const expect = filesToMimes[file];
+        
+        t.equal(reportedMime, expect, 'should equal');
     }
-
+    
     t.end();
 });

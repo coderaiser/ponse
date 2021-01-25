@@ -1,5 +1,4 @@
-Ponse
-=====
+# Ponse
 
 Module for work with requests and responses
 
@@ -10,22 +9,25 @@ Module for work with requests and responses
 ## Api
 
 **isGZIP(request)** check is gzip supported
+
 - http request
-    
+
 **getPathName(request || string)** - get pathname
+
 - http request
 
 **getQuery(request || string)** - get query
+
 - http request
 
 **static(options)** - serve static content
+
 - options:
-    - cache
-    - root
+  - cache
+  - root
 
 **send(data, params)** - send data
 
 ## License
 
 MIT
-

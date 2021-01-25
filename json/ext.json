@@ -70,7 +70,7 @@
     ".json": "application/json",
     ".log": "text/plain",
     ".m3u": "audio/x-mpegurl",
-    ".m4v": "video/mp4",    
+    ".m4v": "video/mp4",
     ".man": "text/troff",
     ".mathml": "application/mathml+xml",
     ".mbox": "application/mbox",
@@ -168,4 +168,3 @@
     ".yml": "text/yaml",
     ".zip": "application/zip"
 }
-

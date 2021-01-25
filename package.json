@@ -11,12 +11,6 @@
     "type": "git",
     "url": "git://github.com/coderaiser/ponse.git"
   },
-  "nyc": {
-    "exclude": [
-      ".madrun.js",
-      "test"
-    ]
-  },
   "scripts": {
     "lint": "madrun lint",
     "fix:lint": "madrun fix:lint",
@@ -58,7 +52,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "publishConfig": {
     "access": "public"
