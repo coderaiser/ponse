@@ -1,7 +1,6 @@
 'use strict';
 
-const test = require('supertape');
-const stub = require('@cloudcmd/stub');
+const {test, stub} = require('supertape');
 
 const ponse = require('..');
 
@@ -20,19 +19,28 @@ test('ponse: path traversal: status', async (t) => {
         },
     });
     
-    t.equal(status, 404, 'should equal');
+    t.equal(status, 404);
     t.end();
 });
 
 test('ponse: path traversal: message', async (t) => {
-    const {body} = await request.get('/../../../../../../etc/passwd', {
-        options: {
-            root: __dirname,
-        },
-    });
+    const options = {
+        root: __dirname,
+    };
+    const request = {
+        url: '/../../../../../../../../etc/passwd',
+    };
+    
+    const response = {
+        send: stub(),
+        setHeader: stub(),
+        end: stub(),
+    };
+    
+    await ponse._getStatic(options, request, response);
     const expect = `Path /etc/passwd beyond root ${__dirname}!`;
     
-    t.equal(body, expect, 'should equal');
+    t.calledWith(response.end, [expect]);
     t.end();
 });
 
@@ -43,18 +51,18 @@ test('ponse: path traversal: status: ok', async (t) => {
         },
     });
     
-    t.equal(status, 200, 'should equal');
+    t.equal(status, 200);
     t.end();
 });
 
-test('ponse: path traversal: status: ok', async (t) => {
+test('ponse: path traversal: status: ok: changed root', async (t) => {
     const {status} = await request.get('/ponse.js', {
         options: {
             root: `${__dirname}/../lib`,
         },
     });
     
-    t.equal(status, 200, 'should equal');
+    t.equal(status, 200);
     t.end();
 });
 
@@ -64,7 +72,7 @@ test('ponse: getPathName: res', (t) => {
         url,
     });
     
-    t.equal(name, '/hello', 'should equal');
+    t.equal(name, '/hello');
     t.end();
 });
 
@@ -72,7 +80,7 @@ test('ponse: getPathName: string', (t) => {
     const url = '/hello?world=1';
     const name = getPathName(url);
     
-    t.equal(name, '/hello', 'should equal');
+    t.equal(name, '/hello');
     t.end();
 });
 
@@ -83,7 +91,7 @@ test('ponse: getQuery', (t) => {
     
     const query = getQuery(req);
     
-    t.equal(query, 'world', 'should equal');
+    t.equal(query, 'world');
     t.end();
 });
 
@@ -91,7 +99,7 @@ test('ponse: getQuery: string', (t) => {
     const url = 'hi?world';
     const query = getQuery(url);
     
-    t.equal(query, 'world', 'should equal');
+    t.equal(query, 'world');
     t.end();
 });
 
@@ -122,6 +130,7 @@ test('ponse: get: content-type', async (t) => {
     };
     
     let file;
+    
     for (file in filesToMimes) {
         const {headers} = await request.get('/' + file, {
             options: {
@@ -132,8 +141,10 @@ test('ponse: get: content-type', async (t) => {
         const reportedMime = headers.get('content-type');
         const expect = filesToMimes[file];
         
-        t.equal(reportedMime, expect, 'should equal');
+        t.equal(reportedMime, expect);
     }
     
     t.end();
+}, {
+    checkAssertionsCount: false,
 });

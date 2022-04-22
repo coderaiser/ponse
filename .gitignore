@@ -1,5 +1,7 @@
 
 node_modules
 .nyc_output
-.putoutcache
 *.swp
+.idea
+yarn-error.log
+coverage
