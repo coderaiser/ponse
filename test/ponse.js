@@ -76,9 +76,21 @@ test('ponse: getPathName: res', (t) => {
     t.end();
 });
 
+test('ponse: getPathName: nbsp', (t) => {
+    const url = '/hello&nbsp;world?world=1';
+    const name = getPathName({
+        url,
+    });
+    
+    t.equal(name, '/hello\xa0world');
+    t.end();
+});
+
 test('ponse: getPathName: string', (t) => {
     const url = '/hello?world=1';
-    const name = getPathName(url);
+    const name = getPathName({
+        url,
+    });
     
     t.equal(name, '/hello');
     t.end();
