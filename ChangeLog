@@ -1,3 +1,15 @@
+2022.04.23, v7.0.0
+
+feature:
+- (ponse) add support of NBSP
+- (package) supertape v7.2.3
+- (package) eslint v8.14.0
+- (package) putout v25.15.0
+- (package) eslint-plugin-putout v14.11.0
+- (package) madrun v9.0.2
+- (ponse) drop support of node < 16
+
+
 2021.01.25, v6.0.0
 
 fix:
