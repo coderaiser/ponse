@@ -31,7 +31,7 @@ Module for work with requests and responses
 
 - http request
 
-**static(options)** - serve static content
+**createStatic(options)** - serve static content
 
 - options:
   - cache
