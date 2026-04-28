@@ -35,7 +35,7 @@
     "file-type": "^22.0.1",
     "files-io": "^4.0.0",
     "itype": "^3.0.1",
-    "try-to-catch": "^3.0.0"
+    "try-to-catch": "^4.0.5"
   },
   "devDependencies": {
     "@cloudcmd/stub": "^5.0.0",
