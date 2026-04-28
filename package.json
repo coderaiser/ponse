@@ -44,7 +44,7 @@
     "eslint": "^10.2.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^31.1.2",
-    "madrun": "^9.0.2",
+    "madrun": "^13.0.1",
     "nodemon": "^2.0.2",
     "putout": "^25.15.0",
     "serve-once": "^2.0.0",
