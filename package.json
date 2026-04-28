@@ -48,7 +48,7 @@
     "nodemon": "^3.1.14",
     "putout": "^42.4.6",
     "serve-once": "^3.0.2",
-    "supertape": "^7.2.3"
+    "supertape": "^12.11.0"
   },
   "license": "MIT",
   "engines": {
