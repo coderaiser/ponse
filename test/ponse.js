@@ -1,10 +1,13 @@
-'use strict';
+import {fileURLToPath} from 'node:url';
+import {dirname} from 'node:path';
+import {test, stub} from 'supertape';
+import serveOnce from 'serve-once';
+import * as ponse from '../lib/ponse.js';
 
-const {test, stub} = require('supertape');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const {request} = serveOnce(ponse.createStatic);
 
-const ponse = require('..');
-
-const {request} = require('serve-once')(ponse.static);
 const {
     getPathName,
     getQuery,
@@ -37,7 +40,7 @@ test('ponse: path traversal: message', async (t) => {
         end: stub(),
     };
     
-    await ponse._getStatic(options, request, response);
+    await ponse.getStatic(options, request, response);
     const expect = `Path /etc/passwd beyond root ${__dirname}!`;
     
     t.calledWith(response.end, [expect]);

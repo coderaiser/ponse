@@ -1,9 +1,7 @@
-'use strict';
+import {defineConfig} from 'eslint/config';
+import {safeAlign} from 'eslint-plugin-putout';
 
-const {defineConfig} = require('eslint/config');
-const {safeAlign} = require('eslint-plugin-putout');
-
-module.exports = defineConfig([
+export default defineConfig([
     safeAlign, {
         rules: {
             'node/no-unsupported-features/node-builtins': 'off',

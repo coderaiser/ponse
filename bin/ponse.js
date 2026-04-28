@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
-'use strict';
+import process from 'node:process';
+import http from 'node:http';
+import ponse from '../lib/ponse.js';
 
-const process = require('node:process');
-const http = require('node:http');
-const ponse = require('../');
 const DIR = process.cwd();
 const server = http.createServer(ponse.static(DIR));
 
