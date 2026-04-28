@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "@cloudcmd/stub": "^5.0.0",
-    "c8": "^7.11.2",
     "coveralls": "^3.0.2",
     "eslint": "^10.2.1",
     "eslint-plugin-node": "^11.0.0",
@@ -48,6 +47,7 @@
     "nodemon": "^3.1.14",
     "putout": "^42.4.6",
     "serve-once": "^3.0.2",
+    "superc8": "^12.3.1",
     "supertape": "^12.11.0"
   },
   "license": "MIT",
