@@ -1,3 +1,8 @@
+2026.04.28, v8.0.1
+
+fix:
+- 6bd7c52 readme: static -> createStatic
+
 2026.04.28, v8.0.0
 
 feature:
