@@ -1,3 +1,20 @@
+2026.04.28, v8.0.0
+
+feature:
+- 3aa5bb0 ponse: migrate to ESM
+- 40c767c ponse: superc8 v12.3.1
+- bd104de ponse: try-to-catch v4.0.5
+- 39cf859 ponse: supertape v12.11.0
+- e51bb91 ponse: serve-once v3.0.2
+- 487d556 ponse: putout v42.4.6
+- ea3c438 ponse: nodemon v3.1.14
+- 6eaa822 ponse: madrun v13.0.1
+- 3fbf6b6 ponse: file-type v22.0.1
+- c2fe291 ponse: eslint-plugin-putout v31.1.2
+- b9f67fc ponse: eslint v10.2.1
+- 071a09e ponse: @cloudcmd/stub v5.0.0
+- 637982c ponse: drop support of node < 22
+
 2022.04.23, v7.0.0
 
 feature:
