@@ -47,7 +47,7 @@
     "madrun": "^13.0.1",
     "nodemon": "^3.1.14",
     "putout": "^42.4.6",
-    "serve-once": "^2.0.0",
+    "serve-once": "^3.0.2",
     "supertape": "^7.2.3"
   },
   "license": "MIT",
