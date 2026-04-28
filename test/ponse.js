@@ -4,13 +4,12 @@ const {test, stub} = require('supertape');
 
 const ponse = require('..');
 
+const {request} = require('serve-once')(ponse.static);
 const {
     getPathName,
     getQuery,
     send,
 } = ponse;
-
-const {request} = require('serve-once')(ponse.static);
 
 test('ponse: path traversal: status', async (t) => {
     const {status} = await request.get('/../../../../../../etc/passwd', {
@@ -27,6 +26,7 @@ test('ponse: path traversal: message', async (t) => {
     const options = {
         root: __dirname,
     };
+    
     const request = {
         url: '/../../../../../../../../etc/passwd',
     };
@@ -128,7 +128,7 @@ test('ponse: send', (t) => {
         request,
     });
     
-    t.notOk(response.end.called, 'should not call response.end');
+    t.notCalled(response.end, 'should not call response.end');
     t.end();
 });
 
@@ -144,9 +144,9 @@ test('ponse: get: content-type', async (t) => {
     let file;
     
     for (file in filesToMimes) {
-        const {headers} = await request.get('/' + file, {
+        const {headers} = await request.get(`/${file}`, {
             options: {
-                root: __dirname + '/../test/fixtures/mimetype/',
+                root: `${__dirname}/../test/fixtures/mimetype/`,
             },
         });
         
