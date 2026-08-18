@@ -1,7 +1,5 @@
 # Ponse [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
-![image](https://user-images.githubusercontent.com/1573141/223524904-4175548f-1e30-4745-bf2e-c2f4ea39fef5.png)
-
 [NPMURL]: https://npmjs.org/package/ponse "npm"
 [NPMIMGURL]: https://img.shields.io/npm/v/ponse.svg?style=flat
 [BuildStatusURL]: https://github.com/coderaiser/ponse/actions?query=workflow%3A%22Node+CI%22 "Build Status"
